@@ -1,5 +1,5 @@
-SODA Tasks
-===========
+SODA Tasks : Home Lab Setup
+=============================
 
 .. toctree::
     :maxdepth: 1
@@ -11,3 +11,5 @@ SODA Tasks
     K8s Setup <./k8sSetup/index.rst>
     Ceph Setup <./ceph-deploy/index.rst>
     ESXi Setup <./esxiSetup/index.rst>
+    Soda Installer <./soda-install/index.rst>
+    Integrations <./integrations/index.rst>

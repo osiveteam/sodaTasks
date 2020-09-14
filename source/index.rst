@@ -16,20 +16,25 @@ Welcome to SODA's documentation!
 Table of Contents
 ==================
 
-   - Soda Screen Flow
-   - SODA task Overview
+   - `Soda Screen Flow </docs/screenFlow/>`_
+   - `SODA task Overview </docs/sodaTask/>`_
 
-      - Optional Pre-optimisations
+      - `Task Overview </docs/sodaTask/taskIntro/>`_
+      - `Soda Architecture Diagram </docs/sodaTask/sodaArchitectureDiagram/>`_
+      - `Optional Pre-optimisations </docs/sodaTask/optionPreOptimisations/>`_
 
-         - Pi-hole Setup
-         - Registry Setup
-         - Sonatype Nexus artifactory Setup
+         - `Pi-hole Setup </docs/sodaTask/optionPreOptimisations/piHoleSetup/>`_
+         - `Registry Setup </docs/sodaTask/optionPreOptimisations/registrySetup/>`_
+         - `Sonatype Nexus artifactory Setup </docs/sodaTask/optionPreOptimisations/sonatypeNexus/>`_
       
-      - Vagrant setup
-      - K8s setup
-      - Ceph setup
-      - ESXi setup
-   
-   - Lab Infra Availability
-   - Soda Installer
-   - Hardware Repair
+      - `Vagrant setup </docs/sodaTask/vagrant/>`_
+      - `K8s setup </docs/sodaTask/k8sSetup/>`_
+      - `Ceph setup </docs/sodaTask/ceph-deploy/>`_
+      - `ESXi setup </docs/sodaTask/esxiSetup/>`_
+      - `Soda Installer </docs/sodaTask/soda-install/>`_
+
+         - `Install SODA using Ansible </docs/sodaTask/soda-install/usingAnsible/>`_
+         - `Install SODA with Local Ceph backend </docs/sodaTask/soda-install/sodaWithLocalCeph/>`_
+         - `Install SODA with External Ceph Backend </docs/sodaTask/soda-install/sodaWithLocalCeph/>`_
+
+   - `Behind the scenes </docs/hardwareRepair/>`_

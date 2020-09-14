@@ -1,0 +1,60 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "bento/ubuntu-20.04"
+  config.vm.host_name = "master"
+
+
+
+  #config.vm.network "public_network"
+  config.vm.network "public_network", ip: "192.168.0.210"
+  default_router = "192.168.0.1"
+  config.vm.provision :shell, :inline => "ip route delete default 2>&1 >/dev/null || true; ip route add default via #{default_router}"
+  #config.vm.provision "shell",
+
+
+  # increase first root disk 
+   
+   config.disksize.size = '200GB'
+
+ 
+  config.persistent_storage.diskdevice = '/dev/sdb'  
+  config.persistent_storage.enabled = true
+  config.persistent_storage.location = "./ceph-disk.vdi"
+  config.persistent_storage.size = 100000
+  config.persistent_storage.use_lvm = false
+  config.persistent_storage.partition = false
+   
+
+
+  #
+   config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+    
+     vb.memory = "8192"
+     vb.cpus = "2"
+     vb.name = "master-K8s"
+     vb.customize ["modifyvm", :id, "--audio", "none"]
+
+    
+   end
+  #
+
+  # SHELL
+  config.vm.provision :shell, :path=>"script.sh"
+  
+end

@@ -1,0 +1,5 @@
+recommonmark
+requests
+Sphinx
+make
+sphinx_rtd_theme
